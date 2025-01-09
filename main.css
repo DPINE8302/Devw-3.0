@@ -1,0 +1,511 @@
+/* General Styles */
+body {
+    margin: 0;
+    font-family: 'Georgia', serif;
+    color: #333;
+    background-color: #f8f8f8; /* Light background for better contrast */
+}
+
+section {
+    padding: 40px 20px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.quote, .skills, .timeline, .gallery, .video, .contact-info {
+    margin-bottom: 40px;
+}
+
+.skills {
+    margin-top: 20px;
+}
+
+.skill-bar {
+    background: #e0e0e0; /* Light gray background */
+    border-radius: 5px;
+    overflow: hidden;
+    margin-bottom: 10px;
+    position: relative;
+}
+
+.skill-name {
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: #f5f5f5; /* Light gray background */
+    padding: 0 10px;
+    border-radius: 5px;
+}
+
+.skill-level {
+    background: #b09f77; /* Gold color */
+    height: 20px;
+    border-radius: 5px;
+    width: 0; /* Initial width for animation */
+    transition: width 2s ease; /* Limited to width only */
+}
+
+.timeline ul {
+    list-style: none;
+    padding: 0;
+}
+
+.timeline ul li {
+    background: #f5f5f5; /* Light gray background */
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+
+.gallery {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+.gallery-item {
+    flex: 1;
+    text-align: center;
+}
+
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    text-decoration: none;
+    color: #fff;
+    background: #4a5d23; /* Old money green */
+    border-radius: 5px;
+    transition: background-color 0.3s; /* Limited to background-color */
+}
+
+.button:hover {
+    background: #6b8e23; /* Slightly lighter green */
+}
+
+.video iframe {
+    width: 100%;
+    max-width: 800px;
+    height: 500px; /* Increased height for larger display */
+    border: none;
+}
+
+footer {
+    background: #d6d6d6; /* Light gray background */
+    text-align: center;
+    padding: 20px 0;
+}
+
+footer p {
+    margin: 0;
+    color: #333;
+}
+
+/* Navigation Header */
+header {
+    background: #233427; /* Dark background for navigation */
+    padding: 10px 0;
+    position: fixed; /* Fixed positioning */
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    transition: background-color 0.3s ease; /* Smooth background color transition */
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #fff; /* White text for better visibility */
+    font-size: 16px;
+    transition: color 0.3s; /* Smooth color transition */
+    padding: 10px;
+    border-radius: 5px;
+}
+
+nav ul li a:hover {
+    background-color: #b09f77; /* Gold color on hover */
+}
+
+/* Sticky Header Background Change */
+header.scrolled {
+    background: #1a1a1a; /* Darker background when scrolled */
+}
+
+/* Scroll Progress Bar */
+#progress-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 5px;
+    background: #b09f77; /* Gold color */
+    width: 0%;
+    z-index: 9999;
+}
+
+/* Full-Page Image Section */
+#intro {
+    position: relative;
+    width: 100%;
+    height: 100vh; /* Full viewport height */
+    overflow: hidden;
+    margin-top: 60px; /* Offset for the header (fixed) */
+}
+
+.full-page-image {
+    background-image: url('Pic8.webp'); /* Add your image URL here */
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.overlay-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    text-align: center;
+    padding: 30px;
+    width: 100%;
+    max-width: 800px;
+   /* background: rgba(74, 86, 69, 0.5); /* Semi-transparent background for better readability */
+    border-radius: 42px;
+}
+
+.overlay-text h1 {
+    font-size: 3rem;
+    margin: 0;
+}
+
+.overlay-text p {
+    font-size: 1.5rem;
+    margin: 10px 0 0;
+}
+
+/* Instagram-Like Collage Styles */
+.collage {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.collage-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    transition: transform 0.3s;
+}
+
+.collage-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures images cover the area without distortion */
+    border-radius: 10px;
+}
+
+.collage-item:hover {
+    transform: scale(1.05);
+}
+
+.collage-item::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.2);
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.collage-item:hover::after {
+    opacity: 1;
+}
+
+/* Responsive Design Enhancements */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    .gallery {
+        flex-direction: column;
+    }
+}
+
+/* Feature Video Section */
+.feature-video {
+    padding: 40px 20px;
+    background-color: #f8f8f8; /* Same light background as other sections */
+    text-align: center;
+}
+
+.feature-video h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.feature-video iframe {
+    width: 100%;
+    max-width: 1200px;
+    height: 700px; /* Adjust height as needed */
+    border: none;
+}
+
+/* Timeline Container */
+#timeline-content {
+    margin-top: 50px;
+    text-align: center;
+    color: #333; /* Dark gray text for better contrast */
+}
+
+/* Timeline List */
+.timeline {
+    border-left: 4px solid #b09f77; /* Gold color to match the overall theme */
+    border-bottom-right-radius: 4px;
+    border-top-right-radius: 4px;
+    background: #f5f5f5; /* Light gray background for contrast */
+    color: #333; /* Dark gray text */
+    font-family: 'Georgia', serif;
+    margin: 50px auto;
+    padding: 42.42px;
+    list-style: none;
+    text-align: left;
+    font-weight: 100;
+    max-width: 40%; /* Slightly wider for better readability */
+    position: relative;
+    line-height: 1.6em; /* Increased line height for better readability */
+    font-size: 1.1em; /* Slightly larger font size */
+}
+
+/* Timeline Heading */
+.timeline h2 {
+    font-family: 'Georgia', serif;
+    font-weight: 400;
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: #4a5d23; /* Old money green for headings */
+}
+
+/* Individual Event */
+.timeline .event {
+    border-bottom: 1px dashed #b09f77; /* Gold color for border */
+    padding-bottom: 25px;
+    margin-bottom: 50px;
+    position: relative;
+}
+
+.timeline .event:last-of-type {
+    padding-bottom: 0;
+    margin-bottom: 0;
+    border: none;
+}
+
+/* Event Date */
+.timeline .event:before {
+    position: absolute;
+    left: -180px;
+    color: #b09f77; /* Gold color for date */
+    content: attr(data-date);
+    text-align: right;
+    font-weight: 100;
+    font-size: 0.95em;
+    min-width: 120px;
+    font-family: 'Georgia', serif;
+}
+
+/* Event Dot */
+.timeline .event:after {
+    position: absolute;
+    left: -55px;
+    background: #b09f77; /* Gold color for the dot */
+    border: 3px solid #4a5d23; /* Old money green border */
+    border-radius: 50%;
+    height: 15px; /* Slightly larger for emphasis */
+    width: 15px;
+    content: "";
+    top: 5px;
+}
+
+/* Event Description */
+.timeline .event h3 {
+    font-size: 1.6em; /* Slightly larger font size */
+    color: #4a5d23; /* Old money green for headings */
+    margin-bottom: 10px;
+}
+
+/* Timeline: before and after pseudo-elements */
+.timeline:before {
+    content: " ";
+    display: inline-block;
+    position: absolute;
+    left: -14px;
+    background: #fff; /* White color for a subtle look */
+    width: 10px;
+    height: 10px;
+    border-radius: 10px;
+    top: 0;
+}
+
+.timeline:after {
+    content: " ";
+    display: inline-block;
+    position: absolute;
+    left: -56px;
+    background: #fff; /* White color for a subtle look */
+    width: 6px;
+    height: 6px;
+    border-radius: 10px;
+    top: 0;
+}
+
+/* Improved Event Content Display */
+.timeline .event-content {
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+/* Enhanced Button Appearance */
+.button-cta {
+    display: inline-block;
+    padding: 12px 24px;
+    font-size: 1.1em;
+    font-weight: 600;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #fff;
+    background-color: #b09f77; /* Gold color */
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    border: 2px solid transparent;
+}
+
+.button-cta:hover {
+    background-color: #fff; /* White background */
+    color: #b09f77; /* Gold color for text */
+    border-color: #b09f77; /* Gold border */
+}
+/* General Typography */
+body {
+    font-family: 'Georgia', serif;
+    color: #333;
+}
+
+h2.section-title, h3.section-heading {
+    font-family: 'Georgia', serif;
+    color: #4a5d23; /* Old money green */
+}
+
+h2.section-title {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+}
+
+p.section-subtitle {
+    font-size: 1.2rem;
+    color: #666;
+    margin-bottom: 2rem;
+}
+
+h3.section-heading {
+    font-size: 1.8rem;
+    margin-bottom: 0.75rem;
+}
+
+p.section-text {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #666;
+}
+
+/* Section Row Layouts */
+.section-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 4rem;
+}
+
+.text-container {
+    flex: 1;
+    padding-right: 60px;  /* Increase padding to avoid overlap */
+    padding-left: 40px;  /* Increase padding to avoid overlap */
+}
+
+.image-container {
+    flex: 1;
+    padding-left: 36px;  /* Increased padding for image to ensure spacing */
+    padding-right: 36px;  /* Increased padding for image to ensure spacing */
+}
+
+.image-container img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.image-container img:hover {
+    transform: scale(1.05); /* Slight zoom-in effect */
+}
+
+/* Reverse layout for text-right, image-left */
+.text-right-image-left {
+    flex-direction: row-reverse; /* Ensure text is on the right and image on the left */
+}
+/* Reverse layout for text-left, image-right */
+.text-left-image-right {
+    flex-direction: row-reverse; /* Ensure text is on the left and image on the right */
+}
+
+
+/* Centered Text Section */
+.center-text-section {
+    margin-bottom: 3rem;
+    padding: 2rem 0;
+    text-align: center;
+}
+
+/* Responsive Layout for Smaller Screens */
+@media (max-width: 768px) {
+    .section-row {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .text-container, .image-container {
+        padding: 0;
+        margin-bottom: 2rem;
+    }
+
+    .image-container img {
+        width: 100%;
+    }
+}

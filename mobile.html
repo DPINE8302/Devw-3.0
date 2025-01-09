@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Win's Portfolio</title>
+    <link rel="stylesheet" href="mobile.css">
+    <!-- ScrollReveal Library for Scroll Animations -->
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <style>
+        /* Additional styling for the video */
+        .feature-video {
+            text-align: center; /* Center the text */
+            margin-bottom: 5px; /* Space between text and iframe */
+        }
+
+        .feature-video iframe {
+            width: 80%; /* Adjust width as needed */
+            height: 555px; /* Adjust height as needed */
+            border: none;
+            margin-top: 0px; /* Space between text and iframe */
+        }
+    </style>
+<style>
+        /* Mobile Styles */
+        @media (max-width: 768px) {
+            nav ul {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .feature-video iframe {
+                width: 100%;
+                height: 250px;
+            }
+
+            .full-page-image .overlay-text {
+                text-align: center;
+                padding: 20px;
+            }
+
+            .skills .skill-bar {
+                margin-bottom: 15px;
+            }
+
+            .text-left-image-right, .text-right-image-left {
+                flex-direction: column;
+            }
+
+            .text-container, .image-container {
+                width: 100%;
+            }
+
+            .image-container img {
+                width: 100%;
+            }
+
+            .collage {
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+                gap: 10px;
+            }
+        }
+   
+</style>
+       
+    </head>
+    <body>
+        <!-- Scroll Progress Bar -->
+        <div id="progress-bar"></div>
+    
+        <!-- Navigation Header -->
+        <header>
+            <div class="nav-overlay"></div>
+            <div class="container">
+                <nav>
+                    <ul>
+                        <li><a href="#about" class="nav-link">About</a></li>
+                        <li><a href="#feature-video" class="nav-link">Feature Video</a></li>
+                        <li><a href="#text-image-sections" class="nav-link">Image</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+    
+</head>
+
+    <!-- Full-Page Image Section -->
+    <section id="intro">
+        <div class="full-page-image">
+            <div class="overlay-text fade-in">
+                <h1>- Win's Portfolio -</h1>
+                <p>No risk. No story.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about">
+        <div class="container">
+            <h2 class="fade-in">About Me</h2>
+            <p class="fade-in">Hello, I'm Win, currently in Grade 10. I am passionate about technology, astronomy, photography, and film. I have notable achievements in robotics, English contests, and running. My goal is to transfer to SPSM School and ultimately study at Chulalongkorn University's Faculty of Communication Arts.</p>
+         
+              <!-- <div class="quote fade-in">
+                <h3>Quote or Motto</h3>
+                <p>"No risk. No story."</p>
+            </div> -->
+                   
+        </div>
+    </section>
+
+    <section id="timeline-content">
+        <div class="container">
+            <h2 class="fade-in">Achievements and Awards</h2>
+            <ul class="timeline fade-in">
+                <li class="event" data-date="2022">
+                    <h3>Gold Award in Robotics</h3>
+                    <p>Won the first of four gold awards in robotics, marking a significant achievement in technology.</p>
+                </li>
+                <li class="event" data-date="2022">
+                    <h3>Gold Medal in Running</h3>
+                    <p>Achieved a gold medal in running, highlighting athletic prowess and determination.</p>
+                </li>
+                <li class="event" data-date="2023">
+                    <h3>Gold Award in Robotics</h3>
+                    <p>Secured another gold in robotics, solidifying expertise and commitment to technological innovation.</p>
+                </li>
+                <li class="event" data-date="2023">
+                    <h3>English Contest Award</h3>
+                    <p>Won an award in an English contest, showcasing linguistic skills and a passion for communication.</p>
+                </li>
+                <li class="event" data-date="2023">
+                    <h3>Silver Medal in Running</h3>
+                    <p>Secured a silver medal in running, adding to a growing list of athletic accomplishments.</p>
+                </li>
+                <li class="event" data-date="2024">
+                    <h3>Silver Award at Regional English Contest</h3>
+                    <p>Earned a silver award at a regional level, demonstrating a continued dedication to excellence in English.</p>
+                </li>
+                <li class="event" data-date="2024">
+                    <h3>Silver Medal in Running</h3>
+                    <p>Won a silver medal, reaffirming a strong presence in athletic competitions.</p>
+                </li>
+            </ul>
+        </div>
+    </section>
+    
+    <!-- Feature Video Section -->
+    <section id="feature-video">
+        <div class="container">
+            <h2 class="fade-in">Feature Video</h2>
+            <div class="feature-video">
+                <iframe src="https://www.youtube.com/embed/BMhot-xCYmk" frameborder="0" allowfullscreen loading="lazy"></iframe>
+            </div>
+        </div>
+    </section>
+
+
+    <section id="text-image-sections" class="section-padding light-bg">
+        <section id="image"></section>
+        <div class="container">
+            <!-- Centered Text Section -->
+            <div class="center-text-section text-center">
+                <h2 class="section-title">A Journey Through Photography</h2>
+                <p class="section-subtitle">Capturing moments that speak louder than words.</p>
+            </div>
+    
+            <!-- Text Left, Image Right Section -->
+            <div class="text-left-image-right section-row">
+                <div class="text-container">
+                    <h3 class="section-heading">Technology and Creativity</h3>
+                    <p class="section-text">Combining technology with creativity allows for endless possibilities in visual storytelling. Every photo I take is a testament to the beauty of innovation.</p>
+                </div>
+                <div class="image-container">
+                    
+                    <img src="Pic10.webp" alt="Technology in Photography">
+                </div>
+            </div>
+    
+            <!-- Text Right, Image Left Section -->
+            <div class="text-right-image-left section-row">
+                <div class="image-container">
+                    <img src="Pic9.webp" alt="Creative Photography">
+                </div>
+                <div class="text-container">
+                    <h3 class="section-heading">The Art of Storytelling</h3>
+                    <p class="section-text">Photography is not just about capturing images; it’s about telling stories. Through my lens, I convey emotions, experiences, and moments that connect deeply with viewers.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+
+ <!-- Collage Section -->
+ <section id="collage">
+    <div class="container">
+        <h2 class="fade-in">Photo Collage</h2>
+        <div class="collage fade-in">
+            <div class="collage-item">
+                <img src="Pic2.webp" alt="Photo 2">
+            </div>
+            <div class="collage-item">
+                <img src="Pic3.webp" alt="Photo 3">
+            </div>
+            <div class="collage-item">
+                <img src="Pic4.webp" alt="Photo 4">
+            </div>
+            <div class="collage-item">
+                <img src="Pic5.webp" alt="Photo 5">
+            </div>
+            <div class="collage-item">
+                <img src="Pic6.webp" alt="Photo 6">
+            </div>
+        </div>
+    </div>
+  </section>
+</section>
+
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <div class="container">
+            <h2 class="fade-in">Contact</h2>
+            <div class="contact-info fade-in">
+                <p>Feel free to reach out to me through the following platforms:</p>
+                <a href="https://www.instagram.com/Win.rn" target="_blank" class="button">Instagram (@Win.rn)</a>
+                <a href="https://www.instagram.com/Win.albums" target="_blank" class="button">Photography Instagram (@Win.albums)</a>
+                <a href="https://www.youtube.com/channel/UCMQefq5ku1GHvTm50Ysixyg" target="_blank" class="button">YouTube Channel</a>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>© 2024 Win. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
